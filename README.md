@@ -1,7 +1,4 @@
-ABR_controller
+ABR_RescueRobotics
 ==============
 
-control the robot over bluetooth using joysticks.
-
-source code modified from:
-https://www.youtube.com/watch?v=Em4Qa09-y90
+App used to run UCI ground robot at Rescue Robotics 2015. Includes open source code from QR code reader ZXing.
