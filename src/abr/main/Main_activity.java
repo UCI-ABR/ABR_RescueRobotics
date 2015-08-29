@@ -271,7 +271,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider,
 				turnCounter--;
 			}
 			//If sonar detects obstacle, backUpCounter will get set, causing robot to back up
-			else if (m_ioio_thread.get_sonar2_reading() < 14){ //change back to 14, 6 for indoor tests
+			else if (m_ioio_thread.get_sonar2_reading() < 20){ //change back to 14, 6 for indoor tests
 				m_ioio_thread.set_speed(1500);
 				m_ioio_thread.set_steering(1500);
 				backUpCounter = 15;
@@ -367,7 +367,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider,
 		//Restart the main app due to problems with resuming after scan activity finishes
 		Intent mStartActivity = new Intent(this, Main_activity.class);
 		mStartActivity.putExtra("autoMode", true);
-		int randomNum = 10 + (int)(Math.random()*20); 
+		int randomNum = 10 + (int)(Math.random()*5); 
 		//Pass info to the restarted activity such that the robot turns for a random amount of time
 		mStartActivity.putExtra("turnCounter",randomNum);
 		mStartActivity.putExtra("pauseCounter",0);
